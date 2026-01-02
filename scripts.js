@@ -1,10 +1,20 @@
-const videos = document.querySelectorAll('.bg-video');
-let current = 0;
+$(function(){
+    var currentDate = new Date();
+    $('#currentYear').text(currentDate.getFullYear());
+})
 
-function showNextVideo() {
-  videos[current].classList.remove('active');
-  current = (current + 1) % videos.length;
-  videos[current].classList.add('active');
-}
+document.addEventListener("DOMContentLoaded", function () {
 
-setInterval(showNextVideo, 6000); // يبدّل كل 6 ثوانٍ
+    const videos = document.querySelectorAll("#showcase .bg-video");
+    let current = 0;
+
+    if (videos.length > 0) {
+        setInterval(() => {
+            videos[current].classList.remove("active");
+            current = (current + 1) % videos.length;
+            videos[current].classList.add("active");
+        }, 6000);
+    }
+
+});
+
