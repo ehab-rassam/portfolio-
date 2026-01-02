@@ -87,13 +87,11 @@ li a {
     z-index: -1;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    display: none;
 }
 
 /* الفيديو النشط */
 #showcase .bg-video.active {
     opacity: 1;
-    display: none;
 }
 
 #showcase h1 {
@@ -182,5 +180,6 @@ li a {
     color: #121116;
 
 }
+
 
 
